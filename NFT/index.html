@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The world of NFTs is here. So keep calm & collect your NFTs">
+    <meta name="keywords" content="NFT, Crypto Currency, Blockchain, Digital Currency">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>NFT</title>
+</head>
+<body class="overflow-x-hidden bg-[#0e0625]">
+    <header class="bg-[#0e0625]">
+        <!-- Nav menu section -->
+        <div class="fixed z-50 top-0 w-full px-5 sm:px-16 py-4 flex justify-between items-center border-b-[3px] bg-gradient-to-r from-[#D266FB] via-[#6B46D3,#2E2640]  to-[#493A56]">
+            <a href="./index.html" aria-label="home-page-link">
+                <img src="assets/logo.png" alt="brand-logo">
+            </a>
+            <nav class="flex gap-20 items-center">
+                <ul class="hidden lg:flex gap-12">
+                    <li>
+                        <a href="#top-creators" class="text-[#ccc] font-medium hover:text-[#3FA4F1]" aria-label="top-creators-page-link">
+                            MARKETPLACE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about-section" class="text-[#ccc] font-medium hover:text-[#3FA4F1]" aria-label="about-section-page-link">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resources" class="text-[#ccc] font-medium hover:text-[#3FA4F1]" aria-label="resources-link">
+                            RESOURCES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#faq" class="text-[#ccc] font-medium hover:text-[#3FA4F1]" aria-label="faq-link">
+                            FAQ
+                        </a>
+                    </li>
+                </ul>
+                <div class="w-fit space-x-1 hidden lg:flex">
+                    <button class="bg-[#1B1726] hover:bg-transparent text-white border-2 border-[#3FA4F1] px-8 h-[45px] rounded-lg">
+                        Log In
+                    </button>
+                    <button class="bg-[#1B1726] hover:bg-transparent text-white border-2 border-[#3FA4F1] px-8 h-[45px] rounded-lg">
+                        Sign Up
+                    </button>
+                </div>
+                <button id="ham-menu-btn" class="text-5xl lg:hidden" onclick="sliderMenu()" aria-label="hamburger-menu-button">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+        <!-- Hero section -->
+        <section class="w-full flex flex-col rounded-b-[100px] pb-16 lg:flex-row mt-20 px-5 sm:px-16 bg-gradient-to-b from-[#6B46D3,#32215e] to-[#1D1336] to-100%">
+            <!-- heading -->
+            <div class="lg:w-1/2 space-y-12">
+                <h1 class="text-6xl pt-20 font-mono text-[#D3ACFF] text-center lg:text-left" data-aos="fade-down">
+                    Keep Calm & Collect Your NFTs
+                </h1>
+                <p class="text-gray-400 text-center lg:text-left" data-aos="zoom-in" data-aos-delay="200">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae facilis ipsa placeat molestias quas unde reiciendis praesentium et nulla, reprehenderit vel! Porro vero temporibus numquam?
+                </p>
+                <div class="w-fit h-fit flex items-center gap-7 mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-fit h-fit">
+                        <img src="assets/play-icon.png" alt="play-icon" class="w-[35px] cursor-pointer">
+                    </div>
+                    <div class="w-[250px] text-sm">
+                        <h3 class="text-white text-lg font-['century_gothic'] font-semibold">Let's get started!</h3>
+                        <p class="text-[#ddd]">Watch this quick demo video to see how to get started.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="lg:w-1/2 flex items-center justify-center pt-20 lg:pt-0 lg:justify-end">
+                <img src="assets/hero-image.png" alt="hero-image" class="w-[70%]" data-aos="fade-down" data-aos-delay="100">
+            </div>
+            <!-- Slide menu -->
+            <div id="slider-menu-container" class="flex lg:hidden justify-center items-center w-[65vw] h-dvh bg-[rgba(0,0,0,0.8)] fixed right-0 z-10 translate-x-full transition-all duration-500">
+                <ul class=" flex flex-col justify-center items-center gap-8">
+                    <li class="w-full text-center py-2 border-2 border-transparent rounded-lg outline-none hover:border-2 hover:border-[#3FA4F1]">
+                        <a href="#top-creators" class="text-[#ccc] font-medium" aria-label="top-creators-page-link">
+                            MARKETPLACE
+                        </a>
+                    </li>
+                    <li class="w-full text-center py-2 border-2 border-transparent rounded-lg outline-none hover:border-2 hover:border-[#3FA4F1]">
+                        <a href="#about-section" class="text-[#ccc] font-medium" aria-label="about-section-page-link">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li class="w-full text-center py-2 border-2 border-transparent rounded-lg outline-none hover:border-2 hover:border-[#3FA4F1]">
+                        <a href="#resources" class="text-[#ccc] font-medium" aria-label="resources-link">
+                            RESOURCES
+                        </a>
+                    </li>
+                    <li class="w-full text-center py-2 border-2 border-transparent rounded-lg outline-none hover:border-2 hover:border-[#3FA4F1]">
+                        <a href="#faq" class="text-[#ccc] font-medium" aria-label="faq-link">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <button class="bg-[#1B1726] hover:bg-transparent text-white border-2 border-[#3FA4F1] px-7 py-2 rounded-lg">
+                            Log In
+                        </button>
+                        <button class="bg-[#1B1726] hover:bg-transparent text-white border-2 border-[#3FA4F1] px-7 py-2 rounded-lg">
+                            Sign Up
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main class="bg-[#0e0625]">
+        <!-- Top Creators Section -->
+        <section id="top-creators" class="pt-20 bg-[#0e0625]">
+            <div class="text-center">
+                <i class="fa-solid fa-people-group text-[#6633DA] text-5xl" data-aos="fade-down" data-aos-delay="100"></i>
+                <h2 class="text-white text-4xl font-mono tracking-[10px]" data-aos="fade-down">Top Creators</h2>
+            </div>
+            <div 
+                class="flex items-end justify-center w-full h-[583px] bg-[url('./assets/map3.png')] bg-center bg-contain bg-no-repeat"
+                data-aos="zoom-in" data-aos-duration ="1000"
+            >
+                <button class="bg-[#0E091A] text-white text-sm border-2 border-[#3FA4F1] hover:bg-transparent px-5 h-[42px] rounded-lg">
+                    View All Collectors
+                </button>
+            </div>
+        </section>
+        <!-- Latest NFT Collections Section -->
+        <section class="w-full flex flex-col lg:flex-row">
+            <!-- aside image-card container -->
+            <aside class="w-full lg:w-1/2 pl-5 sm:pl-16 py-20 flex items-center justify-center flex-wrap gap-16 bg-[radial-gradient(circle_at_left,_var(--tw-gradient-stops))] from-[#450A8C] via-[#0e0625] to-[#0e0625]">
+                <!-- card-1 -->
+                <div class="w-[260px] h-[220px]" data-aos="fade-down">
+                    <img src="./assets/image-card-1.png" alt="image-card-1">
+                </div>
+                <!-- card-2 -->
+                <div class="w-[260px] h-[220px]" data-aos="fade-left">
+                    <img src="./assets/image-card-2.png" alt="image-card-2">
+                </div>
+                <!-- card-3 -->
+                <div class="w-[260px] h-[220px]" data-aos="fade-up">
+                    <img src="./assets/image-card-3.png" alt="image-card-3">
+                </div>
+                <!-- card-4 -->
+                <div class="w-[260px] h-[220px]" data-aos="fade-left">
+                    <img src="./assets/image-card-4.png" alt="image-card-4">
+                </div>
+            </aside>
+            <!-- heading -->
+            <article
+                class="w-full lg:w-1/2 bg-[#0e0625] pl-5 sm:pl-10 pr-5 sm:pr-16 py-20 flex flex-col justify-center items-center text-center"
+            >
+                <i class="fa-solid fa-coins text-[#6633DA] text-5xl" data-aos="zoom-in"></i>
+                <h2 class=" text-white text-3xl sm:text-4xl font-mono tracking-[10px] mt-5" data-aos="zoom-in">Latest NFT Collections</h2>
+                <p class="text-[#5F7A7A] text-xl font-semibold my-12" data-aos="zoom-in">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. asperiores vitae, dolorum mollitia enim dicta laudantium perspiciatis, aliquid cum, animi vero natus qui laborum!
+                </p>
+                <button class="bg-[#0E091A] text-white text-sm border-2 border-[#3FA4F1] hover:bg-transparent px-5 h-[42px] rounded-lg" data-aos="zoom-in">
+                    View All Collectors
+                </button>
+            </article>
+        </section>
+        <!-- Why Choose Us Section -->
+        <section id="faq" class="w-full h-fit flex flex-col lg:flex-row bg-[#0e0625] py-40">
+            <article
+                class="w-full lg:w-2/5 pl-5 sm:pl-16 pr-5 md:pr-16 lg:pr-0 py-16 text-center bg-[#160E2A] border-2 border-[#3FA4F1] lg:border-r-0 border-b-0 lg:border-b-2"
+            >
+                <i class="fa-solid fa-circle-question text-[#6633DA] text-5xl" data-aos="zoom-in"></i>
+                <h2 class=" text-white text-3xl sm:text-4xl font-mono tracking-[10px] mt-5 " data-aos="zoom-in">Why Choose Us?</h2>
+                <p class="text-[#5F7A7A] text-xl font-semibold my-12" data-aos="zoom-in">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, recusandae? Unde eius inventore rem error? Eveniet tempore enim laudantium, vel, doloremque repellendus facere quia, accusantium culpa
+                </p>
+                <p class="text-[#5F7A7A] text-xl font-semibold" data-aos="zoom-in">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, laboriosam. Recusandae doloribus quasi tempore, laborum
+                </p>
+            </article>
+            <aside
+                class="w-full lg:w-1/2 pb-24 lg:py-24 gap-5 bg-[#160E2A] flex flex-wrap items-center justify-center rounded-b-[150px] lg:rounded-r-full border-2 border-[#3FA4F1] lg:border-l-0 border-t-0 lg:border-t-2"
+            >
+                <img src="./assets/marketplace.png" alt="marketplace-image" class="rounded-xl" data-aos="fade-right">
+                <img src="./assets/money-protection.png" alt="money-protection-image" class="rounded-xl" data-aos="fade-right" data-aos-delay="100">
+                <img src="./assets/data-protection.png" alt="data-protection-image" class="rounded-xl lg:ml-14" data-aos="fade-right">
+                <img src="./assets/fast-n-secure.png" alt="fast-n-secure-image" class="rounded-xl" data-aos="fade-right" data-aos-delay="100">
+            </aside>
+        </section>
+        <!-- Create And Sell Your NFTs Section -->
+        <section id="resources" class="w-full bg-[#0e0625]">
+            <!-- heading -->
+            <div class="text-center">
+                <i class="fa-solid fa-sack-dollar text-[#6633DA] text-5xl" data-aos="zoom-in"></i>
+                <h2 class=" text-white text-3xl sm:text-4xl font-mono tracking-[10px] mt-5" data-aos="zoom-in" data-aos-delay="50">
+                    Create And Sell Your NFTs
+                </h2>
+            </div>
+            <!-- Card Container -->
+            <div class="w-full flex flex-wrap justify-evenly gap-y-10 py-20 border-b border-b-[#583191] rounded-b-[150px]">
+                <!-- card-1 -->
+                <div class="w-52 h-fit space-y-4" data-aos="fade-down">
+                    <img src="assets/wallet-one.png" alt="wallet-icon" class="mx-auto">
+                    <h2 class="text-white font-semibold text-center text-lg">Set Up Your Wallet</h2>
+                    <p class="text-gray-400 pl-3">
+                        Once you've set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support.
+                    </p>
+                </div>
+                <!-- card-2 -->
+                <div class="w-52 h-fit space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/triangle-round-rectangle.svg" alt="triangle-round-rectangle-icon" class="mx-auto">
+                    <h2 class="text-white font-semibold text-center text-lg">Create Your Collection</h2>
+                    <p class="text-gray-400 px-4">
+                        Click My Collections and set up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.
+                    </p>
+                </div>
+                <!-- card-3 -->
+                <div class="w-52 h-fit space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/picture.png" alt="picture-icon" class="mx-auto">
+                    <h2 class="text-white font-semibold text-center text-lg">Add Your NFTs</h2>
+                    <p class="text-gray-400 pl-4">
+                        Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content.
+                    </p>
+                </div>
+                <!-- card-4 -->
+                <div class="w-52 h-fit space-y-4" data-aos="fade-down">
+                    <img src="assets/shopping-bag.svg" alt="shopping-bag-icon" class="mx-auto">
+                    <h2 class="text-white font-semibold text-center text-lg">List Them For Sale</h2>
+                    <p class="text-gray-400 pl-3">
+                        Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full h-auto">
+        <!-- Email Section -->
+        <section class="w-full py-28 bg-[#0e0625] flex flex-col items-center justify-center gap-y-10">
+            <h1 class="text-white text-4xl font-mono text-center" data-aos="zoom-in">Ready for Next NFT Drop?</h1>
+            <form class="w-fit flex flex-col justify-center items-center gap-7">
+                <input type="email" name="email" placeholder="youremail@xyz.com" class="w-[300px] h-14 bg-[#0D0819] rounded-md text-center text-white" data-aos="zoom-in" data-aos-delay="100"/>
+                <input type="submit" value="Send Email" class="text-white border-2 border-[#3FA4F1] py-2 px-12 rounded-md text-sm cursor-pointer hover:bg-[#0D0819]" data-aos="zoom-in" data-aos-delay="150"/>
+            </form>
+        </section>
+        <!-- About Section -->
+        <section id="about-section" class="w-full h-auto px-5 sm:px-16 bg-[#0D0819] border-t-2 border-[#3FA4F1] flex flex-col lg:flex-row">
+            <!-- container-1 -->
+            <div class="lg:w-1/2 pt-16 flex flex-col items-center sm:items-start gap-10" data-aos="fade-up">
+                <!-- logo image -->
+                <img src="assets/logo.png" alt="brand-logo" class="w-20">
+                <!-- heading -->
+                <h2 class="text-white text-2xl text-center sm:text-left lg:pr-5">Amazing NFTs marketplace, Authentic and unique digital creation.</h2>
+                <!-- sm icon container -->
+                <div class="w-fit flex gap-5 mt-4">
+                    <!-- icon-1 -->
+                    <div class="w-[45px] h-[45px] border-2 border-[#605CA6] rounded-full pl-[7px] pt-[6px] cursor-pointer">
+                        <img src="assets/whatsapp.png" alt="whatsapp-icon">
+                    </div>
+                    <!-- icon-2 -->
+                    <div class="w-[45px] h-[45px] border-2 border-[#605CA6] rounded-full pl-[15px] pt-2 cursor-pointer">
+                        <img src="assets/fb.png" alt="facebook-icon">
+                    </div>
+                    <!-- icon-3 -->
+                    <div class="w-[45px] h-[45px] border-2 border-[#605CA6] rounded-full pl-[10px] pt-[10px] cursor-pointer">
+                        <img src="assets/insta.png" alt="instagram-icon">
+                    </div>
+                    <!-- icon-4 -->
+                    <div class="w-[45px] h-[45px] border-2 border-[#605CA6] rounded-full pl-2 pt-[10px] cursor-pointer">
+                        <img src="assets/yt.png" alt="youtube-icon">
+                    </div>
+                </div>
+            </div>
+            <!-- container-2 -->
+            <div class="lg:w-1/2 pt-16 flex flex-wrap items-center justify-center sm:justify-between gap-x-5 gap-y-10"  data-aos="fade-down" data-aos-delay="100">
+                <!-- list-1 -->
+                <div class="h-fit">
+                    <!-- <h2 class="text-white text-3xl">Marketplace</h2> -->
+                    <ul class="space-y-7">
+                        <li class="text-white text-3xl">Marketplace</li>
+                        <li class="text-white text-2xl">Explore</li>
+                        <li class="text-white text-2xl">NFTs</li>
+                        <li class="text-white text-2xl">Collectibles</li>
+                        <li class="text-white text-2xl">Virtual Reality</li>
+                    </ul>
+                </div>
+                <!-- list-2 -->
+                <div class="h-fit">
+                    <!-- <h2 class="text-white text-3xl">Resources</h2> -->
+                    <ul class="space-y-7">
+                        <li class="text-white text-3xl">Resources</li>
+                        <li class="text-white text-2xl">Help Center</li>
+                        <li class="text-white text-2xl">Partners</li>
+                        <li class="text-white text-2xl">Blog</li>
+                        <li class="text-white text-2xl">Newsletter</li>
+                    </ul>
+                </div>
+                <!-- list-3 -->
+                <div class="h-fit">
+                    <!-- <h2 class="text-white text-3xl">Company</h2> -->
+                    <ul class="space-y-7 sm:text-right">
+                        <li class="text-white text-3xl">Company</li>
+                        <li class="text-white text-2xl">About Us</li>
+                        <li class="text-white text-2xl">Careers</li>
+                        <li class="text-white text-2xl">Support</li>
+                        <li class="text-white text-2xl">Newsletter</li>
+                    </ul>
+                </div>
+                <!-- list-4 -->
+                <!-- <div class="w-full space-x-10 pl-64 pt-9">
+                    <span class="text-[#43485C] font-semibold text-xl">Privacy Policy</span>
+                    <span class="text-[#43485C] font-semibold text-xl">Terms & Conditions</span>
+                </div> -->
+            </div>
+        </section>
+        <div class="bg-[#0D0819] flex flex-col lg:flex-row gap-5 items-center justify-between px-14 pt-10 pb-5">
+            <p class="text-[#43485C] font-semibold text-xl">Copyright 2022 sapphire, All right reserved.</p>
+            <p>
+                <span class="text-[#43485C] font-semibold text-xl">Privacy Policy</span>
+                <span class="text-[#43485C] font-semibold text-xl">Terms & Conditions</span>
+            </p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();     // Animation on Scroll Plugin
+        const hamMenuBtn = document.getElementById("ham-menu-btn");
+        const menuContainer = document.getElementById("slider-menu-container");
+        function sliderMenu(){
+            if (hamMenuBtn.innerHTML === '<i class="fa-solid fa-xmark"></i>') {
+                hamMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>'
+            } else {
+                hamMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'
+            }
+            menuContainer.classList.toggle('translate-x-full')
+        }
+    </script>
+</body>
+</html>
